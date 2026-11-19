@@ -1,0 +1,8 @@
+name: mac-info
+on:
+  workflow_dispatch:
+jobs:
+  info:
+    runs-on: macos-latest
+    steps:
+      - run: sw_vers; uname -m; xcodebuild -version; ls -d /Applications/Xcode*.app; df -h / | tail -1
